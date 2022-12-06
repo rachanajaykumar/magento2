@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+            <plugin name="afterGetName" 
+            type="Unit1\Test\Plugin\AfterGetName"
+            sortOrder="1" 
+            disabled="false" />
+    </type>
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+    <plugin name="beforeBreadcrumbsPlugin"
+    type="Unit1\Test\Plugin\BeforeBreadcrumbsPlugin" 
+    sortOrder="4" 
+    disabled="false" />
+    </type>
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="afterGetCopyright"
+        type="Unit1\Test\Plugin\AfterGetCopyright"
+        sortOrder="1"
+        disabled="false"/>
+    </type>
+    <type name="Magento\Theme\Block\Html\Header">
+    <plugin name="afterGetWelcome"
+    type="Unit1\Test\Plugin\AfterGetWelcome"
+    sortOrder="1"
+    disabled="false"/>
+    </type>
+</config>
